@@ -34,3 +34,11 @@ Route::get('/demandes', 'DemandesController@index')->name('demandes.index');
 Route::get('/demandes/create', 'DemandesController@create')->name('demandes.create');
 Route::post('/demandes/store', 'DemandesController@store')->name('demandes.store');
 Route::get('/demandes/{id}/show', 'DemandesController@show')->name('demandes.show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
