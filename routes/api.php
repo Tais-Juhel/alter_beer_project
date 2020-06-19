@@ -14,16 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+// Route::post('register', 'Auth\RegisterController@register');
+// Route::post('login', 'Auth\LoginController@login');
+// Route::post('logout', 'Auth\LoginController@logout');
+
+// Route::get('contacts', 'ContactController@indexAPI');
+// Route::get('contacts/{contact}', 'ContactController@showAPI');
+// Route::post('contacts', 'ContactController@storeAPI');
+// Route::put('contacts/{contact}', 'ContactController@updateAPI');
+// Route::delete('contacts/{contact}', 'ContactController@deleteAPI');
+
+Route::middleware('auth:api')->group(function(){
+    Route::get('entreprisesapi', 'EntreprisesController@indexAPI')->name('api.entreprises.indexapi');
+    Route::get('entreprisesapi/{id}/detail', 'EntreprisesController@detail')->name('api.entreprises.detail');
+    Route::get('entreprisesapi/{id}/user', 'EntreprisesController@user')->name('api.entreprises.user');
 });
-
-Route::post('register', 'Auth\RegisterController@register');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout');
-
-Route::get('contacts', 'ContactController@indexAPI');
-Route::get('contacts/{contact}', 'ContactController@showAPI');
-Route::post('contacts', 'ContactController@storeAPI');
-Route::put('contacts/{contact}', 'ContactController@updateAPI');
-Route::delete('contacts/{contact}', 'ContactController@deleteAPI');

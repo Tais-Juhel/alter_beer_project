@@ -1,5 +1,5 @@
 <?php
-
+use App\User;
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
@@ -12,10 +12,15 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
-    protected function redirectTo($request)
+    public function handle($request, Closure $next)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
+        $user = User::where('api_token', $request->api_token)->first();
+        if(!is_null($user)){
+            return $next($request);
         }
+
+        return response()->json([
+            'Etat' => "Désolé, vous n'avez pas de token"
+        ]);
     }
 }

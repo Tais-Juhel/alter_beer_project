@@ -32,4 +32,12 @@ class EntreprisesController extends Controller
         $entreprise = Entreprises::where('id', $entrepriseId)->first();
         return view('entreprises.show', compact('entreprise'));
     }
+
+    public function indexAPI()
+    {
+        $entreprises = Entreprise::all();
+        return response()->json([
+            'entreprises' => $entreprises
+        ]);
+    }
 }
