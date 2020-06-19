@@ -28,15 +28,16 @@ class EntreprisesController extends Controller
         return redirect()->route('entreprises.index');
     }
 
-    public function delete($entrepriseId){
-        $entreprise = Entreprises::where('id', $entrepriseId)->delete();
-        return redirect()->route('entreprises.index');
-    }
-
     public function show($entrepriseId)
     {
         $entreprise = Entreprises::where('id', $entrepriseId)->first();
         return view('entreprises.show', compact('entreprise'));
+    }
+
+    public function delete($entrepriseId) {
+        $entreprise = Entreprises::where('id', $entreprise) -> delete();
+
+        return redirect()->route('entreprises.index')
     }
     
 }
