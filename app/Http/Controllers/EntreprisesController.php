@@ -16,6 +16,11 @@ class EntreprisesController extends Controller
         return view('entreprises.create');
     }
 
+    public function edit($entrepriseId){
+        $entreprise = Entreprises::where('id', $entrepriseId)->first();
+        return view('entreprises.edit', compact('entreprise'));
+    }
+
     public function store(Request $request){
         $entreprise = new Entreprises;
         $entreprise->name = $request->get('name');
