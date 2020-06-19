@@ -33,4 +33,9 @@ class EntreprisesController extends Controller
         $entreprise = Entreprises::where('id', $entrepriseId)->first();
         return view('entreprises.show', compact('entreprise'));
     }
+
+    public function delete($entrepriseId) {
+        $this->model->delete_index($id);
+    }
+    
 }

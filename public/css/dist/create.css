@@ -5,15 +5,11 @@ body {
 }
 
 h1 {
+  margin-top: 50px;
   text-align: center;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-}
-
-.bulle {
   display: flex;
   flex-direction: column;
 }
@@ -30,6 +26,11 @@ label {
   border-radius: 8px;
   background: #f7f4f4;
   box-shadow: inset 5px 5px 10px #e3e0e0,  inset -5px -5px 10px #ffffff;
+}
+
+.bulle {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo .btn-file {
