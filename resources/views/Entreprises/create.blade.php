@@ -14,15 +14,25 @@
     <form class="container" method="post" action="{{ route('entreprises.store') }}">
 
         @csrf
+        <div class="nom bulle">
+            <label for="name">Nom : </label>
+            <input id="name" type="text" name="name" required>
+        </div>
 
-        <label for="name">Nom : </label>
-        <input id="name" type="text" name="name" required>
+        <div class="adress bulle">
+            <label for="adresse">Adresse : </label>
+            <input id="adresse" type="text" name="adresse" required>
+        </div>
 
-        <label for="adresse">Adresse : </label>
-        <input id="adresse" type="text" name="adresse" required>
+        <div class="domaine bulle">
+            <label for="Type">Domaine de l'entreprise : </label>
+            <input id="type" type="text" name="type" required>
+        </div>
 
-        <label for="Type">Type : </label>
-        <input id="type" type="text" name="type" required>
+        <div class="logo bulle">
+            <label for="image" class="label-file">Logo :</label>
+            <input class="btn btn-default btn-file" type="file" name="image" id="image" title="File" required>
+        </div>
 
         <input id="valider" type="submit">
     </form>
