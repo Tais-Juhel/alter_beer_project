@@ -21,6 +21,17 @@ class EntreprisesController extends Controller
         return view('entreprises.edit', compact('entreprise'));
     }
 
+    public function update(Request $request, $entrepriseId){
+        $entreprise = Entreprises::where('id_entreprise', $entrepriseId)->first();
+        $entreprise->name = $request->get('name');
+        $entreprise->adresse = $request->get('adresse');
+        $entreprise->type = $request->get('type');
+        $entreprise->url = $request->get('image');
+        $entreprise->save();
+
+        return redirect()->route('entreprises.edit', $entreprise->id_entreprise);
+    }
+
     public function store(Request $request){
         $entreprise = new Entreprises;
         $entreprise->name = $request->get('name');
