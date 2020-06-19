@@ -27,17 +27,19 @@ class EntreprisesController extends Controller
         return redirect()->route('entreprises.index');
     }
 
+    public function delete($entrepriseId){
+        $entreprise = Entreprises::where('id', $entrepriseId)->delete();
+        return view('entreprises.index', compact('entreprise'));
+    }
+
     public function show($entrepriseId)
     {
         $entreprise = Entreprises::where('id', $entrepriseId)->first();
         return view('entreprises.show', compact('entreprise'));
     }
 
-    public function indexAPI()
-    {
-        $entreprises = Entreprise::all();
-        return response()->json([
-            'entreprises' => $entreprises
-        ]);
+    public function delete($entrepriseId) {
+        $this->model->delete_index($id);
     }
+    
 }

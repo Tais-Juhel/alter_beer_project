@@ -1,0 +1,86 @@
+body{
+    width: 100%;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    margin-top: 50px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-top: 30px;
+    font-weight: 600;
+
+
+}
+
+#name, #adresse, #type {
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 8px;
+    background: #f7f4f4;
+    box-shadow: inset 5px 5px 10px #e3e0e0, 
+                inset -5px -5px 10px #ffffff;
+}
+
+.bulle {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+}
+#valider{
+    height: 40px;
+    outline: none;
+    border: none;
+    margin: 20px;
+    width: 100px;
+    align-self: center;
+    border-radius: 9px;
+    background: #f7f4f4;
+    box-shadow:  8px 8px 20px #dcd9d9, 
+             -8px -8px 20px #ffffff;
+}
+
+/*----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 720px;
+    }
+}
