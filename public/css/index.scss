@@ -24,15 +24,31 @@ h1{
 
             .nom {
             }
-            .supprimer {
+            .edit-delete {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                width: 100px;
-                height: 40px;
-                border-radius: 6px;
-                background: linear-gradient(145deg, #990000, #810000);
+                flex-direction: row;
+                .modifier {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 6px;
+                    background: linear-gradient(145deg, #009e1b, #008517);
+                    margin-right: 5px;
+                }
+                .supprimer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 6px;
+                    background: linear-gradient(145deg, #990000, #810000);
+                    margin-left: 5px;
+                }
             }
         }
     }

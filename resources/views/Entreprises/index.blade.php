@@ -22,8 +22,10 @@
                         <img src="img/{{  $entreprise->url }}" alt="logo-entreprise">
                     </div>
                     <a class="nom" href="{{ route('entreprises.show', $entreprise->id) }}" title="{{ $entreprise->name }}">{{ $entreprise->name }} {{ $entreprise->firstname }}</a>
-                    <a class="modifier" href="{{ route('entreprises.edit', $entreprise->id) }}""></a>
-                    <a class="supprimer" href="{{ route('entreprises.delete', $entreprise->id) }}">Supprimer</a>
+                    <div class="edit-delete">
+                        <a class="modifier" href="{{ route('entreprises.edit', $entreprise->id) }}"">Modifier</a>
+                        <a class="supprimer" href="{{ route('entreprises.delete', $entreprise->id) }}">Supprimer</a>
+                    </div>
                 </li>
 
             @endforeach

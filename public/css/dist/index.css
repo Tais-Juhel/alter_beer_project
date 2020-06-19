@@ -19,7 +19,24 @@ h1 {
   height: 80px;
 }
 
-.container-sm .list-group .list-group-item .supprimer {
+.container-sm .list-group .list-group-item .edit-delete {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-sm .list-group .list-group-item .edit-delete .modifier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #009e1b, #008517);
+  margin-right: 5px;
+}
+
+.container-sm .list-group .list-group-item .edit-delete .supprimer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +45,7 @@ h1 {
   height: 40px;
   border-radius: 6px;
   background: linear-gradient(145deg, #990000, #810000);
+  margin-left: 5px;
 }
 
 #ajouter {
