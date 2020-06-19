@@ -29,7 +29,7 @@ class EntreprisesController extends Controller
         $entreprise->url = $request->get('image');
         $entreprise->save();
 
-        return redirect()->route('entreprises.edit', $entreprise->id);
+        return redirect()->route('entreprises.index', $entreprise->id);
     }
 
     public function store(Request $request){
