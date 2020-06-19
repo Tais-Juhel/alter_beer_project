@@ -17,6 +17,7 @@ class CreateDemandesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
+            $table->foreignId('id_contact');
             $table->timestamps();
         });
     }

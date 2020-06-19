@@ -38,4 +38,34 @@ class ContactsController extends Controller
         $entreprise = Entreprises::where('id', $contact->id_entreprise)->first();
         return view('contacts.show', compact('contact', 'entreprise'));
     }
+
+    //
+
+    public function indexAPI()
+    {
+        return Article::all();
+    }
+ 
+    public function showAPI(Contacts $contact)
+    {
+        return $contact;
+    }
+
+    public function storeAPI(Request $request)
+    {
+        $contact = Contacts::createAPI($request->all());
+        return response()->json($contact, 201);
+    }
+
+    public function updateAPI(Request $request, Contacts $contact)
+    {
+        $contact->update($request->all());
+        return response()->json($contact, 200);
+    }
+
+    public function deleteAPI(Contacts $contact)
+    {
+        $contact->delete();
+        return response()->json(null, 204);
+    }
 }

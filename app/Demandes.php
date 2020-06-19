@@ -12,6 +12,6 @@ class Demandes extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name', 'type',
+        'name','type', 'id_contact'
     ];
 }
