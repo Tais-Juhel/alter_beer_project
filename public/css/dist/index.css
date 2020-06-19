@@ -19,6 +19,10 @@ h1 {
   height: 80px;
 }
 
+.container-sm .list-group .list-group-item .nom {
+  color: black;
+}
+
 .container-sm .list-group .list-group-item .edit-delete {
   display: flex;
   flex-direction: row;
