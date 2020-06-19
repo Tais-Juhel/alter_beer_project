@@ -21,6 +21,7 @@ class EntreprisesController extends Controller
         $entreprise->name = $request->get('name');
         $entreprise->adresse = $request->get('adresse');
         $entreprise->type = $request->get('type');
+        $entreprise->url = $request->get('image');
         $entreprise->save();
 
         
@@ -29,17 +30,13 @@ class EntreprisesController extends Controller
 
     public function delete($entrepriseId){
         $entreprise = Entreprises::where('id', $entrepriseId)->delete();
-        return view('entreprises.index', compact('entreprise'));
+        return redirect()->route('entreprises.index');
     }
 
     public function show($entrepriseId)
     {
         $entreprise = Entreprises::where('id', $entrepriseId)->first();
         return view('entreprises.show', compact('entreprise'));
-    }
-
-    public function delete($entrepriseId) {
-        $this->model->delete_index($id);
     }
     
 }

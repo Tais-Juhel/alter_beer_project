@@ -28,6 +28,7 @@ Route::get('/entreprises', 'EntreprisesController@index')->name('entreprises.ind
 Route::get('/entreprises/create', 'EntreprisesController@create')->name('entreprises.create');
 Route::post('/entreprisess/store', 'EntreprisesController@store')->name('entreprises.store');
 Route::get('/entreprises/{id}/show', 'EntreprisesController@show')->name('entreprises.show');
+Route::get('/entreprises/{id}/delete', 'EntreprisesController@delete')->name('entreprises.delete');
 
 //Demandes
 Route::get('/demandes', 'DemandesController@index')->name('demandes.index');

@@ -20,6 +20,7 @@
                 <li class="list-group-item">
                     <img src="img/facebook.png" alt="facebook">
                     <a href="{{ route('entreprises.show', $entreprise->id) }}" title="{{ $entreprise->name }}">{{ $entreprise->name }} {{ $entreprise->firstname }}</a>
+                    <a href="{{ route('entreprises.delete', $entreprise->id) }}">Supprimer</a>
                 </li>
 
             @endforeach
