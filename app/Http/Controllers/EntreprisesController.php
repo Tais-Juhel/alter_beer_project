@@ -21,11 +21,15 @@ class EntreprisesController extends Controller
         $entreprise->name = $request->get('name');
         $entreprise->adresse = $request->get('adresse');
         $entreprise->type = $request->get('type');
-        $entreprise->url = $request->get('image');
         $entreprise->save();
 
         
         return redirect()->route('entreprises.index');
+    }
+
+    public function delete($entrepriseId){
+        $entreprise = Entreprises::where('id', $entrepriseId)->delete();
+        return view('entreprises.index', compact('entreprise'));
     }
 
     public function show($entrepriseId)
