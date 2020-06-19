@@ -22,14 +22,14 @@ class EntreprisesController extends Controller
     }
 
     public function update(Request $request, $entrepriseId){
-        $entreprise = Entreprises::where('id_entreprise', $entrepriseId)->first();
+        $entreprise = Entreprises::where('id', $entrepriseId)->first();
         $entreprise->name = $request->get('name');
         $entreprise->adresse = $request->get('adresse');
         $entreprise->type = $request->get('type');
         $entreprise->url = $request->get('image');
         $entreprise->save();
 
-        return redirect()->route('entreprises.edit', $entreprise->id_entreprise);
+        return redirect()->route('entreprises.edit', $entreprise->id);
     }
 
     public function store(Request $request){

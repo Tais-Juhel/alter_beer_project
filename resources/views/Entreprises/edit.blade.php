@@ -11,7 +11,7 @@
 <body>
     <h1>Modification d'une Entreprise</h1>
 
-    <form class="container" method="post" action="{{ route('entreprises.update') }}">
+    <form class="container" method="post" action="{{ route('entreprises.update', $entreprise->id) }}">
 
         @csrf
         <div class="nom bulle">
