@@ -18,6 +18,7 @@ class CreateEntreprisesTable extends Migration
             $table->string('name')->unique();
             $table->string('adresse');
             $table->string('type');
+            $table->string('url');
             $table->timestamps();
         });
     }
