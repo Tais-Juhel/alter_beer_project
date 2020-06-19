@@ -20,7 +20,7 @@ h1 {
 }
 
 .container-sm .list-group .list-group-item .nom {
-  color: black;
+  color: #000000;
 }
 
 .container-sm .list-group .list-group-item .edit-delete {
@@ -32,7 +32,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #FFFFFF;
   width: 100px;
   height: 40px;
   border-radius: 6px;
@@ -44,7 +44,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #FFFFFF;
   width: 100px;
   height: 40px;
   border-radius: 6px;

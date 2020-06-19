@@ -1,3 +1,7 @@
+//colors:
+$noir: #000000;
+$blanc: #FFFFFF;
+
 body{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -23,7 +27,7 @@ h1{
             }
 
             .nom {
-                color: black;
+                color: $noir;
             }
             .edit-delete {
                 display: flex;
@@ -32,7 +36,7 @@ h1{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: white;
+                    color: $blanc;
                     width: 100px;
                     height: 40px;
                     border-radius: 6px;
@@ -43,7 +47,7 @@ h1{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: white;
+                    color: $blanc;
                     width: 100px;
                     height: 40px;
                     border-radius: 6px;
