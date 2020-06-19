@@ -6,6 +6,38 @@ body{
 h1{
     margin: 0;
 }
+.container-sm {
+    .list-group {
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .image {
+
+    
+                img {
+                    object-fit: cover;
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            .nom {
+            }
+            .supprimer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                width: 100px;
+                height: 40px;
+                border-radius: 6px;
+                background: linear-gradient(145deg, #990000, #810000);
+            }
+        }
+    }
+}
+
 #ajouter{
     margin: 20px;
 }

@@ -35,9 +35,9 @@ class EntreprisesController extends Controller
     }
 
     public function delete($entrepriseId) {
-        $entreprise = Entreprises::where('id', $entreprise) -> delete();
+        $entreprise = Entreprises::where('id', $entrepriseId) -> delete();
 
-        return redirect()->route('entreprises.index')
+        return redirect()->route('entreprises.index');
     }
     
 }
