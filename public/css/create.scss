@@ -1,5 +1,4 @@
 body{
-    display: flex;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -10,8 +9,7 @@ h1{
 
 form{
     display: flex;
-
-    flex-direction: row;
+    flex-direction: column;
 }
 label{
     margin-top: 10px;
