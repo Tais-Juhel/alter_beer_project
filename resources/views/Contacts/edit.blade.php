@@ -29,7 +29,7 @@
         <input id="email_verified_at" type="text" name="email_verified_at" value="{{ $contact->email}}" required>
 
         <label for="entreprise">Entreprise :</label>
-        <select id="entreprise" name="entreprise" value="{{ $entreprises->id}}" required>
+        <select id="entreprise" name="entreprise" value="{{ $contact->id_entreprise }}" required>
             @foreach($entreprises as $entreprise)
 
                 <option value="{{ $entreprise->id }}">{{ $entreprise->name }}</option>
