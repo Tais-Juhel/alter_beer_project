@@ -39,6 +39,9 @@ Route::get('/demandes', 'DemandesController@index')->name('demandes.index');
 Route::get('/demandes/create', 'DemandesController@create')->name('demandes.create');
 Route::post('/demandes/store', 'DemandesController@store')->name('demandes.store');
 Route::get('/demandes/{id}/show', 'DemandesController@show')->name('demandes.show');
+Route::get('/demandes/{id}/delete', 'DemandesController@delete')->name('demandes.delete');
+Route::get('/demandes/{id}/edit', 'DemandesController@edit')->name('demandes.edit');
+Route::post('/demandes/{id}/update', 'DemandesController@update')->name('demandes.update');
 
 Auth::routes();
 

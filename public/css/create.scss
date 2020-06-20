@@ -5,35 +5,72 @@ body{
 }
 
 h1{
+    justify-content: center;
     margin-top: 50px;
     text-align: center;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
 }
 
 label{
     margin-top: 30px;
     font-weight: 600;
-
-
 }
 
-#name, #firstname, #adresse, #type, #number, #email_verified_at, #email, #entreprise, #contact {
-    border: none;
-    outline: none;
-    height: 40px;
-    border-radius: 8px;
-    background: #f7f4f4;
-    box-shadow: inset 5px 5px 10px #e3e0e0, 
-                inset -5px -5px 10px #ffffff;
-}
-
-.bulle {
+.container {
     display: flex;
     flex-direction: column;
+
+    .neumo {
+        border: none;
+        outline: none;
+        height: 40px;
+        border-radius: 8px;
+        background: #f7f4f4;
+        box-shadow: inset 5px 5px 10px #e3e0e0, 
+                    inset -5px -5px 10px #ffffff;
+    }
+
+    .bulle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ajout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        #valider{
+            height: 40px;
+            outline: none;
+            border: none;
+            margin: 20px;
+            width: 100px;
+            align-self: center;
+            border-radius: 9px;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            box-shadow:  21px 21px 43px #e0e0e0, 
+                         -21px -21px 43px #ffffff;
+        }
+        
+        .retour {
+            margin: 20px;
+            height: 40px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            ;
+            border-radius: 9px;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            box-shadow:  21px 21px 43px #e0e0e0, 
+                         -21px -21px 43px #ffffff;
+                
+                a {
+                    color: black;
+                }
+        }
 }
 
 .logo {
@@ -57,43 +94,7 @@ label{
         display: block;
     }
 }
-.ajout {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    #valider{
-        height: 40px;
-        outline: none;
-        border: none;
-        margin: 20px;
-        width: 100px;
-        align-self: center;
-        border-radius: 9px;
-        background: linear-gradient(145deg, #e6e6e6, #ffffff);
-        box-shadow:  21px 21px 43px #e0e0e0, 
-                     -21px -21px 43px #ffffff;
-    }
-    
-    .retour {
-        margin: 20px;
-        height: 40px;
-        width: 100px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        border: none;
-        outline: none;
-        ;
-        border-radius: 9px;
-        background: linear-gradient(145deg, #e6e6e6, #ffffff);
-        box-shadow:  21px 21px 43px #e0e0e0, 
-                     -21px -21px 43px #ffffff;
-            
-            a {
-                color: black;
-            }
-    }
+
 }
 
 /*----------------------------------------------------------------------------------------------

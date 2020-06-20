@@ -16,22 +16,22 @@
         @csrf
         <div class="nom bulle">
             <label for="name">Nom : </label>
-            <input id="name" type="text" name="name" required>
+            <input id="name" type="text" name="name" class="neumo" required>
         </div>
 
         <div class="adress bulle">
             <label for="adresse">Adresse : </label>
-            <input id="adresse" type="text" name="adresse" required>
+            <input id="adresse" type="text" name="adresse" class="neumo" required>
         </div>
 
         <div class="domaine bulle">
             <label for="Type">Domaine de l'entreprise : </label>
-            <input id="type" type="text" name="type" required>
+            <input id="type" type="text" name="type" class="neumo" required>
         </div>
 
         <div class="logo bulle">
             <label for="image" class="label-file">Logo :</label>
-            <input class="btn btn-default btn-file" type="file" name="image" id="image" title="File" required>
+            <input class="btn btn-default btn-file" type="file" name="image" id="image" title="File"  class="neumo"required>
         </div>
         <div class="ajout">
             <div class="retour">

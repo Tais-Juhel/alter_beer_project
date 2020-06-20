@@ -13,6 +13,10 @@ body {
   align-items: center;
 }
 
+.container h1 {
+  margin-bottom: 100px;
+}
+
 .container .image {
   margin-bottom: 10%;
   padding: 10px;

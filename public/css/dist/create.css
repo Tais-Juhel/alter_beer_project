@@ -5,13 +5,9 @@ body {
 }
 
 h1 {
+  justify-content: center;
   margin-top: 50px;
   text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
 }
 
 label {
@@ -19,7 +15,12 @@ label {
   font-weight: 600;
 }
 
-#name, #firstname, #adresse, #type, #number, #email_verified_at, #email, #entreprise, #contact {
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .neumo {
   border: none;
   outline: none;
   height: 40px;
@@ -28,17 +29,54 @@ label {
   box-shadow: inset 5px 5px 10px #e3e0e0,  inset -5px -5px 10px #ffffff;
 }
 
-.bulle {
+.container .bulle {
   display: flex;
   flex-direction: column;
 }
 
-.logo .btn-file {
+.container .ajout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container .ajout #valider {
+  height: 40px;
+  outline: none;
+  border: none;
+  margin: 20px;
+  width: 100px;
+  align-self: center;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 21px 21px 43px #e0e0e0,  -21px -21px 43px #ffffff;
+}
+
+.container .ajout .retour {
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 21px 21px 43px #e0e0e0,  -21px -21px 43px #ffffff;
+}
+
+.container .ajout .retour a {
+  color: black;
+}
+
+.container .logo .btn-file {
   position: relative;
   overflow: hidden;
 }
 
-.logo .btn-file input[type=file] {
+.container .logo .btn-file input[type=file] {
   position: absolute;
   top: 0;
   right: 0;
@@ -52,43 +90,6 @@ label {
   background: white;
   cursor: inherit;
   display: block;
-}
-
-.ajout {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.ajout #valider {
-  height: 40px;
-  outline: none;
-  border: none;
-  margin: 20px;
-  width: 100px;
-  align-self: center;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow: 21px 21px 43px #e0e0e0,  -21px -21px 43px #ffffff;
-}
-
-.ajout .retour {
-  margin: 20px;
-  height: 40px;
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow: 21px 21px 43px #e0e0e0,  -21px -21px 43px #ffffff;
-}
-
-.ajout .retour a {
-  color: black;
 }
 
 /*----------------------------------------------------------------------------------------------
