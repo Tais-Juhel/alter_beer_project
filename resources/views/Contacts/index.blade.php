@@ -19,6 +19,10 @@
 
                 <li class="list-group-item">
                     <a href="{{ route('contacts.show', $contact->id) }}" title="{{ $contact->name }}">{{ $contact->name }} {{ $contact->firstname }}</a>
+                    <div class="edit-delete">
+                        <a class="modifier" href="{{ route('contacts.edit', $contact->id) }}"">Modifier</a>
+                        <a class="supprimer" href="{{ route('contacts.delete', $contact->id) }}">Supprimer</a>
+                    </div>
                 </li>
 
             @endforeach

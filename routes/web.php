@@ -22,7 +22,9 @@ Route::get('/contacts', 'ContactsController@index')->name('contacts.index');
 Route::get('/contacts/create', 'ContactsController@create')->name('contacts.create');
 Route::post('/contacts/store', 'ContactsController@store')->name('contacts.store');
 Route::get('/contacts/{id}/show', 'ContactsController@show')->name('contacts.show');
-
+Route::get('/contacts/{id}/delete', 'ContactsController@delete')->name('contacts.delete');
+Route::get('/contacts/{id}/edit', 'ContactsController@edit')->name('contacts.edit');
+Route::post('/contacts/{id}/update', 'ContactsController@update')->name('contacts.update');
 //Entreprises
 Route::get('/entreprises', 'EntreprisesController@index')->name('entreprises.index');
 Route::get('/entreprises/create', 'EntreprisesController@create')->name('entreprises.create');

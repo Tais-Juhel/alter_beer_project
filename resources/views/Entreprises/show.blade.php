@@ -12,8 +12,8 @@
         @if(!is_null($entreprise))
             <h1>{{ $entreprise->name }}</h1>
 
-            <div class="logo">
-                <img src="img/{{  $entreprise->url }}" alt="logo-entreprise">
+            <div class="image">
+                <img src="../../../public/img/{{  $entreprise->url }}" alt="logo-entreprise">
             </div>
 
             <div class="adresse">
@@ -24,7 +24,7 @@
             <p>l'entreprise n'existe pas</p>
         @endif
             <div class="retour">
-                <a href="{{ route('entreprises.index') }}">Retour a l'accueil</a>
+                <a href="{{ route('entreprises.index') }}">Retour</a>
             </div>
     </div>
 </body>

@@ -33,8 +33,12 @@
             <label for="image" class="label-file">Logo :</label>
             <input class="btn btn-default btn-file" type="file" name="image" id="image" title="File" required>
         </div>
-
-        <input id="valider" type="submit">
+        <div class="ajout">
+            <div class="retour">
+                <a href="{{ route('entreprises.index') }}">Retour</a>
+            </div>
+            <input id="valider" type="submit">
+        </div>
     </form>
 </body>
 </html>

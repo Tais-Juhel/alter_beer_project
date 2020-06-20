@@ -11,6 +11,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .image {
+        margin-bottom: 10%;
+        padding: 10px;
+        background: linear-gradient(145deg, #e6e6e6, #ffffff);
+        box-shadow:  21px 21px 43px #e0e0e0, 
+                     -21px -21px 43px #ffffff;
+        img {
+            object-fit: cover;
+            width: 180px;
+            height: 180px;
+        }
+    }
 
     .adresse {
         display: flex;
@@ -18,7 +30,7 @@ body{
         text-align: center;
         justify-content: center;
         height: 300px;
-        width: 300px;
+        width: 500px;
         border-radius: 20px;
         background: linear-gradient(145deg, #e6e6e6, #ffffff);
         box-shadow:  21px 21px 43px #e0e0e0, 
@@ -39,6 +51,7 @@ body{
             
             a {
                 text-transform: uppercase;
+                
             }
     }
 }

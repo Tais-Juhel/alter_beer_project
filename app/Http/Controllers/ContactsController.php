@@ -15,16 +15,36 @@ class ContactsController extends Controller
     }
 
     public function create(){
+        $contacts = Contacts::all();
         $entreprises = Entreprises::all();
-        return view('contacts.create', compact('entreprises'));
+        return view('contacts.create', compact('contacts','entreprises'));
     }
 
+    public function edit($contactId){
+        $contact = Contacts::where('id', $contactId)->first();
+        $entreprises = Entreprises::all();
+        return view('contacts.edit', compact('contact', 'entreprises'));
+    }
+
+    public function update(Request $request, $contactId){
+        $contact = Contacts::where('id', $contactId)->first();
+        $contact->name = $request->get('name');
+        $contact->firstname = $request->get('firstname');
+        $contact->number = $request->get('number');
+        $contact->email = $request->get('email');
+        $contact->id = $request->get('contact');
+        $contact->save();
+
+        return redirect()->route('contacts.index', $contact->id);
+    }
+    
     public function store(Request $request){
         $contact = new Contacts;
         $contact->name = $request->get('name');
         $contact->firstname = $request->get('firstname');
         $contact->number = $request->get('number');
         $contact->email = $request->get('email');
+        $contact->id = $request->get('contact');
         $contact->id_entreprise = $request->get('entreprise');
         $contact->save();
 
@@ -35,8 +55,14 @@ class ContactsController extends Controller
     public function show($contactId)
     {
         $contact = Contacts::where('id', $contactId)->first();
-        $entreprise = Entreprises::where('id', $contact->id_entreprise)->first();
-        return view('contacts.show', compact('contact', 'entreprise'));
+        $contact = contacts::where('id', $contact->id_contact)->first();
+        return view('contacts.show', compact('contact', 'contact'));
+    }
+
+    public function delete($contactId) {
+        $contact = Contacts::where('id', $contactId) -> delete();
+
+        return redirect()->route('contacts.index');
     }
 
     //

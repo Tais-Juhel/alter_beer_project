@@ -29,8 +29,12 @@
 
             @endforeach
         </select>
-
-        <input id="valider" type="submit">
+        <div class="ajout">
+            <div class="retour">
+                <a href="{{ route('demandes.index') }}">Retour</a>
+            </div>
+            <input id="valider" type="submit">
+        </div>
     </form>
 </body>
 </html>

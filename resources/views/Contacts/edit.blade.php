@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -16,20 +16,20 @@
         @csrf
 
         <label for="name">Nom : </label>
-        <input id="name" type="text" name="name" required>
+        <input id="name" type="text" name="name" value="{{ $contact->name}}" required>
         <label for="firstname">Prénom : </label>
-        <input id="firstname" type="text" name="firstname" required>
+        <input id="firstname" type="text" name="firstname" value="{{ $contact->firstname}}" required>
 
         <label for="number">Téléphone : </label>
-        <input id="number" type="tl" name="number" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" placeholder="Format - 06.32.52.45.78" required>
+        <input id="number" type="tl" name="number" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" placeholder="Format - 06.32.52.45.78" value="{{ $contact->number}}" required>
 
         <label for="email">Email : </label>
-        <input id="email" type="text" name="email" required>
+        <input id="email" type="text" name="email" value="{{ $contact->email}}" required>
         <label for="email_verified_at">Vérifier votre Email : </label>
-        <input id="email_verified_at" type="text" name="email_verified_at" required>
+        <input id="email_verified_at" type="text" name="email_verified_at" value="{{ $contact->email}}" required>
 
         <label for="entreprise">Entreprise :</label>
-        <select id="entreprise" name="entreprise" required>
+        <select id="entreprise" name="entreprise" value="{{ $entreprises->id}}" required>
             @foreach($entreprises as $entreprise)
 
                 <option value="{{ $entreprise->id }}">{{ $entreprise->name }}</option>
