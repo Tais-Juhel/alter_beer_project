@@ -55,8 +55,8 @@ class ContactsController extends Controller
     public function show($contactId)
     {
         $contact = Contacts::where('id', $contactId)->first();
-        $contact = contacts::where('id', $contact->id_contact)->first();
-        return view('contacts.show', compact('contact', 'contact'));
+        $entreprise = Entreprises::where('id', $contact->id_entreprise)->first();
+        return view('contacts.show', compact('contact', 'entreprise'));
     }
 
     public function delete($contactId) {
