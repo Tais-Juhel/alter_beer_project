@@ -41,7 +41,7 @@ class DemandesController extends Controller
         $demande->id_contact = $request->get('contact');
         $demande->save();
 
-        return redirect()->route('demandes.index', $demandes->id);
+        return redirect()->route('demandes.index', $demande->id);
     }
 
 

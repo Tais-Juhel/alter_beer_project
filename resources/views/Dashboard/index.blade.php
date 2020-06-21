@@ -12,9 +12,9 @@
     <div class="container">
         <h1 class="title">Dashboard</h1>
         <div class="nav">
-            <a href="entreprises.index" id="entreprise" class="btn btn-primary">Entreprises</a>
-            <a href="contacts.index" id="contacts" class="btn btn-primary">Contacts</a>
-            <a href="demandes.index" id="demandes" class="btn btn-primary">Demandes</a>
+            <a href="{{ route('entreprises.index') }}" id="entreprise" class="btn btn-primary">Entreprises</a>
+            <a href="{{ route('contacts.index') }}" id="contacts" class="btn btn-primary">Contacts</a>
+            <a href="{{ route('demandes.index') }}" id="demandes" class="btn btn-primary">Demandes</a>
         </div>
     </div>
 </body>

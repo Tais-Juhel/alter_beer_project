@@ -11,7 +11,7 @@
 <body>
     <h1>Modification d'une demande</h1>
 
-    <form class="container" method="post" action="{{ route('demandes.store') }}">
+    <form class="container" method="post" action="{{ route('demandes.update', $demande->id) }}">
 
         @csrf
         <div class="nom bulle">

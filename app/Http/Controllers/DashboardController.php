@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Dashboard;
+use App\Entreprises;
+use App\Contacts;
+use App\Demandes;
 
 class DashboardController extends Controller
 {
     public function index(){
-        $dashboard = Dashboard::all();
-        return view('dashboard.index', compact('dashboard'));
+        return view('dashboard.index');
     }
 }
