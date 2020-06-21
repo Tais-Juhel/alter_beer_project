@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 //Dashboard
-Route::get('/Dash', 'DashboardController@index')->name('dashboard.index');
+Route::get('/dash', 'DashboardController@index')->name('dashboard.index');
 
 //Contacts
 Route::get('/contacts', 'ContactsController@index')->name('contacts.index');

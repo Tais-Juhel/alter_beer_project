@@ -3,6 +3,7 @@ $noir: #000000;
 $blanc: #FFFFFF;
 
 body{
+    background-color: black;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -62,6 +63,28 @@ h1{
 
 #ajouter{
     margin: 20px;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    h1 {
+
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .entreprises {
+    
+        }
+        .contacts {
+    
+        }
+        .demandes {
+    
+        }
+    }
 }
 
 /*----------------------------------------------------------------------------------------------
