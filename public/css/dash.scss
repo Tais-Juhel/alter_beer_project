@@ -1,21 +1,15 @@
-.container {
+body{
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
-    h1 {
 
+
+    body{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
     }
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        .entreprises {
     
-        }
-        .contacts {
-    
-        }
-        .demandes {
-    
-        }
+    h1{
+        margin: 0;
     }
+
 }

@@ -1,10 +1,13 @@
-.container {
+body {
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  background-color: black;
 }
 
-.container .nav {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+body body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body h1 {
+  margin: 0;
 }

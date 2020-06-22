@@ -27,6 +27,8 @@
 
             @endforeach
         </ul>
+
+        <a id="retour" href="{{ route('dashboard.index') }}" class="btn btn-primary" title="Retour dashboard">Retour</a>
     </div>
 </body>
 </html>
