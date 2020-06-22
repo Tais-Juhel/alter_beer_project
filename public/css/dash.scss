@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     margin: 0;
 }
@@ -11,4 +12,26 @@ body{
 .nav{
     display: flex;
     justify-content: space-around;
+=======
+.container {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    h1 {
+
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .entreprises {
+    
+        }
+        .contacts {
+    
+        }
+        .demandes {
+    
+        }
+    }
+>>>>>>> ef4516e08ae4e62e84bce16698d7348a73d8d21a
 }

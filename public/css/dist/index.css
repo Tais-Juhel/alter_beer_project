@@ -57,17 +57,6 @@ h1 {
   margin: 20px;
 }
 
-.container {
-  font-family: 'Montserrat', sans-serif;
-  background-color: black;
-}
-
-.container .nav {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 /*----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------*/
 @media (min-width: 1200px) {

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 body{margin:0}.container{display:flex;flex-direction:column;text-align:center}.nav{display:flex;justify-content:space-around}
+=======
+.container{font-family:Montserrat,sans-serif;background-color:#000}.container .nav{display:flex;justify-content:center;align-content:center}
+>>>>>>> ef4516e08ae4e62e84bce16698d7348a73d8d21a
